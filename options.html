@@ -1,0 +1,41 @@
+<!-- options.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>OpenAI API 키 설정</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    input {
+      width: 300px;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 0px none;
+      border-radius: 10px;
+      background-color: rgb(208, 208, 208);
+    }
+    button {
+      padding: 10px;
+      background-color: rgb(85, 85, 255);
+      border-radius: 10px;
+      border: 0px none;
+      padding: auto;
+      color:white;
+    }
+  </style>
+</head>
+<body>
+  <h2>OpenAI API 키 입력</h2>
+  <input type="password" id="apikey" placeholder="OpenAI API Key" />
+  <br/>
+  <button id="save">저장하기</button>
+  <span id="status"></span>
+  <p>아직 API 키가 없나요?&nbsp;<a href="https://platform.openai.com/api-keys">발급받기</a></p>
+  <br>
+  <p style="color: rgb(182, 181, 181);">API 키는 로컬에만 저장되며 업로드되지 않습니다. 확장프로그램을 사용하며 발생하는 모든 비용은 본인 부담입니다.</p>
+  <script src="options.js"></script>
+</body>
+</html>

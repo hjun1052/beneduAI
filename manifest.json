@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "베네듀 AI",
+    "version": "1.0.00",
+    "description": "베네듀 그거 왜 직접 푸는 거임?",
+    "permissions": ["storage"],
+    "host_permissions": [
+      "https://api.openai.com/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://*.benedu.co.kr/Learn/TakeTest*"],
+        "js": ["content.js", "libs/purify.min.js", "libs/marked.min.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "options_page": "options.html",
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+}
+
+  
